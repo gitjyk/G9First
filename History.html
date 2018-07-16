@@ -1,20 +1,44 @@
 <!doctype html>
 <html>
 <head>
-  <title>WEB1 - History</title>
+  <title>G9First - Welcome</title>
   <meta charset="utf-8">
+
+  <script>
+    function changeCaption(cap) {
+         document.getElementById("fruit").innerText = cap;
+    }
+  </script>
+
 </head>
 <body>
-  <h1><a href="index.html">Home</a></h1>
+  <h1><a href="index.html">G9 Home</a></h1>
   <ol>
-    <li><a href="web1/1.html">HTML</a></li>
-    <li><a href="web1/2.html">CSS</a></li>
-    <li><a href="web1/3.html">JavaScript</a></li>
-    <li><a href="web1/4.html">Link</a></li>
+    <li><a href="g9home/541.html">G9Farm</a></li>
+    <li><a href="HTML/htmlhome.html">HTML</a></li>
+    <li><a href="INFO/infohome.html">GENERAL INFOMATION</a></li>
+    <li><a href="MFC/MfcHome.html">MFC INFOMATION</a></li>
+    <li><a href="VSCODE/VsCodeHome.html">VSCODE INFOMATION</a></li>
 
   </ol>
-  <h2>WEB</h2>
-  <p>The World Wide Web (abbreviated WWW or the Web) is an information space where documents and other web resources are identified by Uniform Resource Locators (URLs), interlinked by hypertext links, and can be accessed via the Internet.[1] English scientist Tim Berners-Lee invented the World Wide Web in 1989. He wrote the first web browser computer program in 1990 while employed at CERN in Switzerland.[2][3] The Web browser was released outside of CERN in 1991, first to other research institutions starting in January 1991 and to the general public on the Internet in August 1991.
-  </p>
+  <h2>G9-HOME History</h2>
+  <h2 id="nowtime">현재 시간</h2>
+
+  <script>
+      setInterval(function() {
+           var now = new Date();
+           var nowtime = "현재 시간은 " + now.getFullYear() + "년 " +
+                (now.getMonth() + 1) + "월 " +   now.getDate() + "일 " + now.getHours() + ":" + now.getMinutes() +
+                ":" + now.getSeconds() + "입니다.";
+           document.getElementById("nowtime").innerHTML = nowtime;
+           }, 1000);
+  </script>
+
+<p id="fruit">과일</p>
+<form>
+    <input type="button" value="Apple" onClick="changeCaption('Apple')">
+    <input type="button" value="Orange" onClick="changeCaption('Orange')">
+</form>
+
 </body>
 </html>
