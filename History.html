@@ -2,8 +2,8 @@
 <html>
 <head>
   <title>G9First - Welcome</title>
-  <meta charset="utf-8">
-
+  <!-- <meta charset="utf-8">
+  -->
   <script>
     function changeCaption(cap) {
          document.getElementById("fruit").innerText = cap;
@@ -39,6 +39,14 @@
     <input type="button" value="Apple" onClick="changeCaption('Apple')">
     <input type="button" value="Orange" onClick="changeCaption('Orange')">
 </form>
+
+<h1>Hello Web Pages</h1> 
+<p>The time is @DateTime.Now</p>
+
+<?php
+echo "My first PHP script!";
+?> 
+
 <?php
 $myfile = fopen("MyDoc/MyHistory.txt", "r") or die("Unable to open file!");
 echo fread($myfile,filesize("webdictionary.txt"));
